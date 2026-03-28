@@ -9,9 +9,14 @@ Write your own pytest tests here. You must implement at least 3 test functions:
 The autograder will run your tests as part of the CI check.
 """
 
+import os
+import sys
 import pandas as pd
 import numpy as np
 import pytest
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from pipeline import load_data, clean_data, add_features
 
 
